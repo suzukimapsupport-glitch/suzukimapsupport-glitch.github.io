@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>口コミ・マップサポート｜美容室のGoogleマップ集客・口コミ返信代行</title>
+<meta name="description" content="美容室のGoogleマップ集客をお手伝いします。口コミへの返信案づくり、週1回の投稿、店舗情報の整備、毎月の順位レポートまで。パスワード不要・最初の1ヶ月無料・月9,800円（税込）。まずは無料診断から。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="口コミ・マップサポート｜美容室のGoogleマップ集客">
+<meta property="og:description" content="口コミ返信・投稿・店舗情報の整備・順位レポート。パスワード不要、まずは無料診断から。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1200&h=630&q=80&auto=format&fit=crop">
+<link rel="canonical" href="https://suzukimapsupport-glitch.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23B5532A'/%3E%3Cpath d='M32 13a12 12 0 0 0-12 12c0 9 12 24 12 24s12-15 12-24a12 12 0 0 0-12-12z' fill='white'/%3E%3Ccircle cx='32' cy='25' r='5' fill='%23B5532A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"口コミ・マップサポート",
+ "description":"美容室向けのGoogleマップ運用・口コミ返信代行サービス","areaServed":"JP","priceRange":"月9,800円（税込）",
+ "sameAs":["https://www.instagram.com/suzuki_kuchikomi_support/"]}
+</script>
+<style>
+:root{
+ --bg:#F7F3EE;--paper:#FFFDFA;--ink:#1C1A17;--sub:#6A635B;--line:#E4DCD1;
+ --acc:#B5532A;--acc-d:#8F3F1E;--gold:#B89B72;--dark:#171513;
+ --serif:"Shippori Mincho","Hiragino Mincho ProN",serif;--en:"Cormorant Garamond",serif;
+ --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.9;font-size:16px;letter-spacing:.03em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.en{font-family:var(--en);font-style:italic;letter-spacing:.08em;color:var(--gold)}
+.label{display:flex;align-items:center;gap:14px;font-family:var(--en);font-size:15px;letter-spacing:.25em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
+.label::before{content:"";width:36px;height:1px;background:currentColor}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.6vw,40px);line-height:1.5;letter-spacing:.06em}
+.lead{color:var(--sub);margin-top:18px;max-width:640px}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--acc);color:#fff;font-weight:700;padding:17px 34px;border-radius:2px;letter-spacing:.1em;transition:background .3s,transform .3s}
+.btn::after{content:"→";transition:transform .3s}
+.btn:hover{background:var(--acc-d)}
+.btn:hover::after{transform:translateX(4px)}
+.btn.line{background:transparent;border:1px solid rgba(255,255,255,.7)}
+.btn.line:hover{background:rgba(255,255,255,.12)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:20;transition:background .4s,box-shadow .4s}
+header.solid{background:rgba(247,243,238,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:17px;color:#fff;transition:color .4s}
+header.solid .brand{color:var(--ink)}
+.brand img{width:38px;height:38px;border-radius:50%}
+.menu{display:flex;gap:30px;align-items:center;font-size:14px;color:#fff}
+header.solid .menu{color:var(--ink)}
+.menu a:not(.btn){opacity:.85}.menu a:not(.btn):hover{opacity:1}
+.menu .btn{padding:11px 22px;font-size:13px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=2000&q=80&auto=format&fit=crop") center/cover;transform:scale(1.06);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,.35) 0%,rgba(15,13,11,.25) 40%,rgba(15,13,11,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:110px;width:100%}
+.hero .en{color:#E9D7BC;font-size:20px;margin-bottom:18px;display:block}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,68px);line-height:1.45;letter-spacing:.08em}
+.hero p{max-width:560px;margin:26px 0 38px;color:rgba(255,255,255,.86)}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-tags{display:flex;gap:26px;margin-top:40px;font-size:13px;color:rgba(255,255,255,.75);flex-wrap:wrap}
+.hero-tags span::before{content:"—";margin-right:8px;color:#E9D7BC}
+.scroll{position:absolute;right:28px;bottom:40px;z-index:2;writing-mode:vertical-rl;font-family:var(--en);letter-spacing:.3em;font-size:13px;color:rgba(255,255,255,.7)}
+.scroll::after{content:"";display:block;width:1px;height:60px;background:rgba(255,255,255,.6);margin:12px auto 0}
+
+section{padding:130px 0}
+
+/* concept */
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.concept-img{position:relative}
+.concept-img img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.concept-img .sub{position:absolute;width:46%;right:-36px;bottom:-48px;border:10px solid var(--bg)}
+.concept-img .sub img{aspect-ratio:1/1}
+.concept p{color:var(--sub);margin-top:22px}
+.big-num{font-family:var(--en);font-size:96px;line-height:1;color:var(--acc)}
+
+/* worries */
+.worries{background:var(--paper)}
+.worry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px}
+.worry{border-top:1px solid var(--ink);padding-top:22px}
+.worry .n{font-family:var(--en);font-size:30px;color:var(--gold)}
+.worry h3{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.7;margin:8px 0}
+.worry p{font-size:14px;color:var(--sub)}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:70px;background:var(--paper)}
+.svc-item{padding:52px 48px;border:1px solid var(--line);margin:-1px 0 0 -1px;position:relative}
+.svc-item .n{font-family:var(--en);font-size:56px;color:var(--acc);line-height:1}
+.svc-item h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:16px 0 10px;letter-spacing:.06em}
+.svc-item p{color:var(--sub);font-size:15px}
+.svc-item small{display:block;margin-top:14px;font-size:12px;color:var(--gold);letter-spacing:.15em}
+
+/* reply example */
+.example{background:var(--dark);color:#fff}
+.example .lead{color:#B9B1A6}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:60px}
+.ex{padding:38px;border:1px solid #3A352F;background:#1F1C19}
+.ex .tag{display:inline-block;font-size:12px;letter-spacing:.2em;padding:4px 12px;margin-bottom:18px}
+.ex.ng .tag{background:#3A2A26;color:#E8A08A}
+.ex.ok .tag{background:#2B3326;color:#B7D3A2}
+.ex .review{font-size:14px;color:#A39A8F;border-left:2px solid #4A443D;padding-left:14px;margin-bottom:18px}
+.ex .reply{font-family:var(--serif);font-size:17px;line-height:2}
+.ex .why{margin-top:18px;font-size:13px;color:#A39A8F}
+
+/* diagnosis */
+.diag{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.phone{position:relative;max-width:360px;margin:0 auto}
+.phone img{border-radius:28px;box-shadow:0 40px 80px rgba(28,26,23,.22);border:10px solid #fff}
+.phone .chip{position:absolute;left:-40px;top:40px;background:var(--acc);color:#fff;padding:14px 18px;font-size:13px;line-height:1.5;box-shadow:0 14px 30px rgba(0,0,0,.15)}
+.phone .chip b{font-family:var(--en);font-size:30px;display:block}
+.diag ul{list-style:none;margin:30px 0 36px}
+.diag li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:16px}
+.diag li span{font-family:var(--en);color:var(--acc);font-size:20px;width:30px}
+.note{font-size:12px;color:var(--sub);margin-top:12px}
+
+/* band */
+.band{height:460px;background:url("https://images.unsplash.com/photo-1695527081848-1e46c06e6458?w=2000&q=80&auto=format&fit=crop") center 35%/cover fixed;position:relative}
+.band::after{content:"";position:absolute;inset:0;background:rgba(15,13,11,.35)}
+.band p{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;color:#fff;font-family:var(--serif);font-size:clamp(22px,3vw,34px);letter-spacing:.15em;text-align:center;padding:0 20px;line-height:1.8}
+
+/* price */
+.price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:60px;background:var(--paper);border:1px solid var(--line)}
+.price-img{background:url("https://images.unsplash.com/photo-1626383120723-2a941488860d?w=1200&q=80&auto=format&fit=crop") center/cover;min-height:460px}
+.price-body{padding:60px 56px}
+.price-body .trial{display:inline-block;border:1px solid var(--acc);color:var(--acc);font-size:13px;letter-spacing:.15em;padding:6px 14px;margin-bottom:22px}
+.amount{font-family:var(--en);font-size:76px;line-height:1;color:var(--ink)}
+.amount small{font-family:var(--sans);font-size:15px;color:var(--sub);margin-left:8px}
+.price-body ul{list-style:none;margin:30px 0 36px}
+.price-body li{padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.price-body li::before{content:"";display:inline-block;width:6px;height:6px;background:var(--acc);border-radius:50%;margin-right:14px;vertical-align:middle}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;border-top:1px solid var(--ink)}
+.flow div{padding:30px 26px 0 0}
+.flow .en{font-size:16px;color:var(--acc);font-style:normal;letter-spacing:.2em}
+.flow h3{font-family:var(--serif);font-weight:600;font-size:20px;margin:10px 0}
+.flow p{font-size:14px;color:var(--sub)}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq-list{margin-top:50px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:26px 0}
+summary{font-family:var(--serif);font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--en);font-size:26px;color:var(--acc);line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--sub);margin-top:14px;font-size:15px;max-width:820px}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.about-img img{aspect-ratio:1/1;object-fit:cover}
+.about p{color:var(--sub);margin-top:22px}
+.sign{margin-top:26px;font-family:var(--serif);font-size:18px}
+
+/* final */
+.final{position:relative;color:#fff;text-align:center;padding:160px 0;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1791714975692-3a07f7f3b861?w=2000&q=80&auto=format&fit=crop") center/cover}
+.final::after{content:"";position:absolute;inset:0;background:rgba(15,13,11,.68)}
+.final .wrap{position:relative;z-index:2}
+.final .label{justify-content:center;color:#E9D7BC}
+.final p{color:rgba(255,255,255,.85);margin:22px auto 40px;max-width:560px}
+.final .small{font-size:13px;color:rgba(255,255,255,.65);margin-top:22px}
+
+footer{background:var(--dark);color:#8C847A;font-size:12px;padding:48px 0;text-align:center;line-height:2}
+footer .brand{justify-content:center;color:#fff;margin-bottom:12px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+ section{padding:90px 0}
+ .menu a:not(.btn){display:none}
+ .concept,.diag,.about,.price-wrap,.ex-grid{grid-template-columns:1fr;gap:48px}
+ .concept-img .sub{right:-10px;bottom:-30px}
+ .worry-grid{grid-template-columns:1fr 1fr}
+ .svc{grid-template-columns:1fr}
+ .svc-item{padding:40px 28px}
+ .flow{grid-template-columns:1fr 1fr;row-gap:30px}
+ .price-img{min-height:260px}
+ .price-body{padding:44px 28px}
+ .band{background-attachment:scroll;height:340px}
+ .phone .chip{left:-10px}
+ .scroll{display:none}
+}
+@media (max-width:560px){
+ .worry-grid,.flow{grid-template-columns:1fr}
+ .hero .wrap{padding-bottom:80px}
+ .amount{font-size:60px}
+ .menu .btn{display:none}
+}
+.mock{background:#FAF8F5;border-radius:28px;border:10px solid #fff;box-shadow:0 40px 80px rgba(28,26,23,.22);padding:22px 18px;font-size:12px;line-height:1.6}
+.mk-h{display:flex;justify-content:space-between;align-items:center}.mk-h b{font-size:17px}.mk-h span{background:#FFF1E8;color:#C2410C;font-weight:700;padding:2px 10px;border-radius:6px}
+.mk-s{color:#6B6B6B;margin:4px 0 12px}.mk-c{background:#fff;border:1px solid #E5E1DA;border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.mk-t{font-weight:700;margin-bottom:6px}.mk-g{display:grid;grid-template-columns:repeat(3,1fr)}.mk-g i{display:block;font-style:normal;font-weight:700;font-size:24px}.mk-g i.a{color:#C2410C}.mk-g small{color:#6B6B6B;font-size:10px}
+.mk-r{display:flex;flex-direction:column;border-top:1px solid #F0ECE6;padding:5px 0}.mk-r:first-of-type{border-top:0}.mk-r span{font-weight:700}.mk-r em{font-style:normal;color:#6B6B6B;font-size:11px}
+.mk-c ul{list-style:none}.mk-c li::before{content:"●";color:#C2410C;font-size:8px;margin-right:8px;vertical-align:middle}.mk-n{color:#6B6B6B;font-size:10px}
+.brand svg{flex-shrink:0}
+.diag .mock ul{margin:0}.diag .mock li{display:block;padding:3px 0;border:0}
+.phone .chip{top:-26px;bottom:auto;left:auto;right:-28px}
+</style>
+</head>
+<body>
+<header id="hd">
+ <div class="wrap nav">
+  <a class="brand" href="#top"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#B5532A"/><path d="M32 13a12 12 0 0 0-12 12c0 9 12 24 12 24s12-15 12-24a12 12 0 0 0-12-12z" fill="#fff"/><circle cx="32" cy="25" r="5" fill="#B5532A"/></svg>口コミ・マップサポート</a>
+  <nav class="menu">
+   <a href="#service">サービス</a><a href="#price">料金</a><a href="#flow">流れ</a><a href="#faq">よくある質問</a>
+   <a class="btn" href="#contact">無料診断</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="hero-bg"></div>
+ <div class="wrap">
+  <span class="en">Google Maps Support for Hair Salons</span>
+  <h1>その口コミの先に、<br>次のお客様がいる。</h1>
+  <p>新しいお客様の多くは、来店前にGoogleマップで口コミと「お店からの返信」を読んでいます。施術で手が離せないオーナーさまに代わって、Googleマップをまるごと整えます。</p>
+  <div class="cta">
+   <a class="btn" href="#contact">無料でGoogleマップ診断を受ける</a>
+   <a class="btn line" href="#service">サービスを見る</a>
+  </div>
+  <div class="hero-tags"><span>パスワード不要</span><span>最初の1ヶ月無料</span><span>いつでも解約OK</span></div>
+ </div>
+ <div class="scroll">SCROLL</div>
+</section>
+
+<section>
+ <div class="wrap concept">
+  <div class="concept-img rv">
+   <img src="https://images.unsplash.com/photo-1626379501846-0df4067b8bb9?w=1200&q=80&auto=format&fit=crop" alt="落ち着いた雰囲気の美容室の内装">
+   <div class="sub"><img src="https://images.unsplash.com/photo-1600948835780-9c4a8b55cf50?w=700&q=80&auto=format&fit=crop" alt="店内に置かれた観葉植物"></div>
+  </div>
+  <div class="rv">
+   <div class="label">Concept</div>
+   <h2>技術と想いが、<br>来店前から伝わるように。</h2>
+   <p>どれだけ丁寧な施術をしていても、それが伝わらなければ、新しいお客様は別のお店を選んでしまいます。</p>
+   <p>Googleマップは、ホットペッパーとは別の、もうひとつの「お店の顔」です。口コミへの誠実な返信、季節ごとのお知らせ、最新の写真や営業時間。小さな積み重ねで、あなたのお店らしさを、まだ出会っていないお客様へ届けます。</p>
+  </div>
+ </div>
+</section>
+
+<section class="worries">
+ <div class="wrap">
+  <div class="label rv">Worries</div>
+  <h2 class="rv">こんなこと、後回しに<br>なっていませんか。</h2>
+  <div class="worry-grid">
+   <div class="worry rv"><div class="n">01</div><h3>口コミへの返信が<br>追いつかない</h3><p>大切なのはわかっていても、施術や接客で手が回らない。</p></div>
+   <div class="worry rv"><div class="n">02</div><h3>厳しい口コミに<br>どう返せばいいか</h3><p>★1や★2に、言葉を選んで返信するのは時間も気力も使う。</p></div>
+   <div class="worry rv"><div class="n">03</div><h3>自分のお店が<br>何番目か知らない</h3><p>「地域名＋美容室」で検索したとき、どこに表示されているのか。</p></div>
+   <div class="worry rv"><div class="n">04</div><h3>写真や情報が<br>古いまま</h3><p>営業時間、メニュー、予約リンク。気づけば何年も前のまま。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="service">
+ <div class="wrap">
+  <div class="label rv">Service</div>
+  <h2 class="rv">Googleマップを、<br>まるごとお任せください。</h2>
+  <p class="lead rv">作業はすべてこちらで行います。お店の名前で掲載されるものは、必ず事前にご確認いただいてから公開します。</p>
+  <div class="svc">
+   <div class="svc-item rv"><div class="n">01</div><h3>口コミへの返信案づくり</h3><p>お店の雰囲気や言葉づかいに合わせて、一件ずつ返信文をお作りします。厳しい口コミにも、言い返さず、誠実に。</p><small>REPLY</small></div>
+   <div class="svc-item rv"><div class="n">02</div><h3>週1回のお知らせ投稿</h3><p>季節のメニュー、キャンペーン、空き状況。「今も丁寧に営業しているお店」であることを、継続して伝えます。</p><small>POST</small></div>
+   <div class="svc-item rv"><div class="n">03</div><h3>店舗情報の整備</h3><p>営業時間、写真、メニュー、予約ページへのリンク。来店前に見られる情報を、正しく、魅力的に整えます。</p><small>PROFILE</small></div>
+   <div class="svc-item rv"><div class="n">04</div><h3>毎月のレポート</h3><p>検索順位、表示回数、電話やルート検索の数。毎月の変化を一枚にまとめ、次にやることと一緒にお届けします。</p><small>REPORT</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="example">
+ <div class="wrap">
+  <div class="label rv" style="color:#E9D7BC">Example</div>
+  <h2 class="rv">返信ひとつで、<br>読む人の印象は変わります。</h2>
+  <p class="lead rv">厳しい口コミへの返信は、書いた本人だけでなく、これから来店を考えている方が読んでいます。</p>
+  <div class="ex-grid">
+   <div class="ex ng rv">
+    <span class="tag">よくある返信</span>
+    <div class="review">口コミ：写真を見せたのに、思っていたより短く切られてしまいました。</div>
+    <div class="reply">「当店ではご希望を確認したうえで施術しております。」</div>
+    <div class="why">言い返しているように読めてしまい、「怖いお店」という印象を与えかねません。</div>
+   </div>
+   <div class="ex ok rv">
+    <span class="tag">こんな返信を</span>
+    <div class="review">口コミ：写真を見せたのに、思っていたより短く切られてしまいました。</div>
+    <div class="reply">「この度はご来店ありがとうございました。お写真までご用意いただいたのに、ご希望の長さに仕上げられず、申し訳ございません。カット前の長さの確認を見直してまいります。」</div>
+    <div class="why">お詫び・具体的な受け止め・改善の3つが入るだけで、誠実なお店として伝わります。</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap diag">
+  <div class="phone rv">
+   <div class="mock" role="img" aria-label="Googleマップ無料診断の見本（数字は見本です）">
+    <div class="mk-h"><b>Googleマップ 無料診断</b><span>見本</span></div>
+    <div class="mk-s">○○美容室 様｜「○○駅 美容室」で検索</div>
+    <div class="mk-c"><div class="mk-t">1. 現在の状態</div>
+     <div class="mk-g"><div><i class="a">15位</i><small>検索順位</small></div><div><i>4.2</i><small>評価</small></div><div><i class="a">0/10</i><small>口コミへの返信</small></div></div></div>
+    <div class="mk-c"><div class="mk-t">2. 上位のお店との違い</div>
+     <div class="mk-r"><span>口コミへの返信</span><em>上位店 ほぼ全件／○○様 0件</em></div>
+     <div class="mk-r"><span>写真の数</span><em>上位店 100枚以上／○○様 12枚</em></div>
+     <div class="mk-r"><span>最近の投稿</span><em>上位店 毎週／○○様 なし</em></div></div>
+    <div class="mk-c"><div class="mk-t">3. できること</div><ul><li>口コミへの丁寧な返信</li><li>週1回のお知らせ投稿</li><li>写真・予約リンクの整備</li><li>毎月の順位レポート</li></ul></div>
+    <div class="mk-n">※数字は見本です</div>
+   </div>
+   <div class="chip"><b>Free</b>無料診断の見本</div>
+  </div>
+  <div class="rv">
+   <div class="label">Free Diagnosis</div>
+   <h2>まずは、今のお店を<br>知ることから。</h2>
+   <p class="lead">InstagramのDMで「診断」とお送りいただくだけ。お店のGoogleマップを調べて、一枚にまとめてお届けします。</p>
+   <ul>
+    <li><span>01</span>「地域名＋美容室」で検索したときの、今の順位</li>
+    <li><span>02</span>評価と、口コミへの返信の状況</li>
+    <li><span>03</span>上位のお店との違いと、できること</li>
+   </ul>
+   <a class="btn" href="#contact">無料診断を申し込む</a>
+   <p class="note">※検索順位は、検索する場所や時間によって変わります。診断では測り方を明記してお伝えします。順位の上昇をお約束するものではありません。</p>
+  </div>
+ </div>
+</section>
+
+<div class="band"><p>小さな積み重ねが、<br>「選ばれる理由」になる。</p></div>
+
+<section id="price">
+ <div class="wrap">
+  <div class="label rv">Price</div>
+  <h2 class="rv">わかりやすい、ひとつの料金。</h2>
+  <div class="price-wrap rv">
+   <div class="price-img" role="img" aria-label="美容室の椅子と白い壁"></div>
+   <div class="price-body">
+    <span class="trial">最初の1ヶ月は無料でお試し</span>
+    <div class="amount">¥9,800<small>／月（税込）</small></div>
+    <ul>
+     <li>口コミへの返信案づくり（件数無制限）</li>
+     <li>週1回のお知らせ投稿</li>
+     <li>店舗情報の整備</li>
+     <li>毎月の順位・数字レポート</li>
+     <li>初期費用なし・いつでも解約OK</li>
+    </ul>
+    <a class="btn" href="#contact">まずは無料診断から</a>
+    <p class="note">※無料お試しは先着の数店舗さま限定です。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="flow" style="padding-top:0">
+ <div class="wrap">
+  <div class="label rv">Flow</div>
+  <h2 class="rv">ご利用の流れ</h2>
+  <p class="lead rv">お店のパスワードをお聞きすることは、一切ありません。</p>
+  <div class="flow">
+   <div class="rv"><span class="en">STEP 01</span><h3>無料診断</h3><p>InstagramのDMで「診断」とお送りください。お店の状態を一枚にまとめてお届けします。</p></div>
+   <div class="rv"><span class="en">STEP 02</span><h3>管理者に招待</h3><p>Googleの画面から、こちらのGmailを「管理者」に追加していただくだけ。2〜3分で終わります。</p></div>
+   <div class="rv"><span class="en">STEP 03</span><h3>お試し開始</h3><p>返信案や投稿を作成し、ご確認いただいてから掲載します。毎週、作業内容をご報告します。</p></div>
+   <div class="rv"><span class="en">STEP 04</span><h3>1ヶ月後に判断</h3><p>レポートをご覧いただき、続けるかどうかをお決めください。合わなければ、そこで終了です。</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="faq" id="faq">
+ <div class="wrap">
+  <div class="label rv">FAQ</div>
+  <h2 class="rv">よくあるご質問</h2>
+  <div class="faq-list">
+   <details><summary>パスワードは必要ですか？</summary><p>必要ありません。お店のGoogleアカウントから、こちらのGmailを「管理者」として招待していただく仕組みです。</p></details>
+   <details><summary>お店のページを消されたりしませんか？</summary><p>「管理者」の権限では、ページの削除やオーナーの変更はできません。不要になったら、同じ画面からいつでも外せます。</p></details>
+   <details><summary>勝手に返信や投稿をされませんか？</summary><p>返信も投稿も、掲載前に必ず内容をご確認いただきます。ご確認いただいたもの以外は掲載しません。</p></details>
+   <details><summary>口コミを増やしたり、良い口コミを書いてもらったりできますか？</summary><p>お客様になりすました口コミや、割引と引き換えに口コミをお願いすることは、Googleの規約や法律に反するため行いません。来店されたお客様に自然に口コミをお願いする方法はご提案できます。</p></details>
+   <details><summary>遠方のお店でも依頼できますか？</summary><p>はい。すべてオンラインで完結するため、全国どちらの美容室でもご利用いただけます。</p></details>
+   <details><summary>解約に条件はありますか？</summary><p>ありません。いつでも解約でき、違約金もかかりません。</p></details>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap about">
+  <div class="about-img rv"><img src="https://images.unsplash.com/photo-1787880172059-1c52decb1ca9?w=1000&q=80&auto=format&fit=crop" alt="美容室のシャンプー台"></div>
+  <div class="rv">
+   <div class="label">About</div>
+   <h2>一店一店に、<br>丁寧に向き合います。</h2>
+   <p>口コミ・マップサポート代表のスズキです。千葉県在住の大学生で、地元のお店のGoogleマップ対策をお手伝いしています。</p>
+   <p>AIも活用しながら、返信の一つひとつをお店の言葉で丁寧にお作りします。大きな業者さんより小回りがきく分、お店ごとの雰囲気に合わせた対応を大切にしています。</p>
+   <div class="sign">口コミ・マップサポート　スズキ</div>
+  </div>
+ </div>
+</section>
+
+<section class="final" id="contact">
+ <div class="wrap">
+  <div class="label">Contact</div>
+  <h2>まずは、無料のGoogleマップ診断から。</h2>
+  <p>InstagramのDMで「診断」とお送りください。<br>お店の検索順位と口コミの状態を、一枚にまとめてお届けします。</p>
+  <a class="btn" href="https://www.instagram.com/suzuki_kuchikomi_support/" target="_blank" rel="noopener">InstagramのDMで申し込む</a>
+  <div class="small">しつこい営業のご連絡はいたしません。費用は一切かかりません。</div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="brand"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#B5532A"/><path d="M32 13a12 12 0 0 0-12 12c0 9 12 24 12 24s12-15 12-24a12 12 0 0 0-12-12z" fill="#fff"/><circle cx="32" cy="25" r="5" fill="#B5532A"/></svg>口コミ・マップサポート</div>
+  美容室のGoogleマップ集客・口コミ返信代行<br>
+  Googleマップは Google LLC の商標です。当サービスは Google とは関係のない独立したサービスです。<br>
+  Photos: Unsplash<br>© 口コミ・マップサポート
+ </div>
+</footer>
+
+<script>
+const hd=document.getElementById('hd');
+const onScroll=()=>hd.classList.toggle('solid',scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
