@@ -40,7 +40,7 @@ h+='</div><h2>3. 伸ばせるところ</h2>';
 D.gaps.forEach(function(g){h+='<div class="gap"><p class="f">'+e(g[0])+'</p><p><em>できること</em>'+e(g[1])+'</p><p><em>期待できること</em>'+e(g[2])+'</p></div>'});
 h+='<p class="note">順位や問い合わせの増加を保証するものではありません。効果は計測した数字でご報告します。</p>';
 h+='<div class="offer"><h2>ご提案</h2><p>上の作業（口コミのお願いの仕組み、返信文の作成、マップ投稿の作成、毎月の順位報告）を、<b>月3万円</b>でお引き受けします。<b>初月は無料</b>で、いつでも解約できます。現場の手を止めず、写真と一言メモを送っていただくだけで進めます。</p>';
-h+='<p class="c">ご興味があれば、InstagramのDMにそのままご返信いただくか、hitokuru.sns@gmail.com までご連絡ください。ご不要でしたら、返信は不要です。</p></div>';
+h+='<p class="c">無料の1か月をお試しいただける場合は、InstagramのDMに「お試し希望」とだけご返信いただくか、hitokuru.sns@gmail.com までご連絡ください。</p></div>';
 h+='<footer>口コミ・マップサポート スズキ　<a href="https://suzukimapsupport-glitch.github.io/">https://suzukimapsupport-glitch.github.io</a><br>このページは'+e(D.name)+'様へのご連絡用に作成したもので、検索エンジンには表示されません。</footer></div>';
 var s=document.createElement('style');s.textContent=css;document.head.appendChild(s);
 document.body.innerHTML=h;
