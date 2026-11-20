@@ -172,6 +172,24 @@ details p{color:var(--sub);margin-top:14px;font-size:15px;max-width:820px}
 .final .wrap{position:relative;z-index:2}
 .final .label{justify-content:center;color:#E9D7BC}
 .final p{color:rgba(255,255,255,.85);margin:22px auto 40px;max-width:560px}
+
+.gform{max-width:620px;margin:10px auto 0;background:var(--paper);color:var(--ink);text-align:left;padding:34px 30px;border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.gform .f{margin-bottom:16px}
+.gform label,.gform .lb{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.gform .rq{font-size:11px;color:#fff;background:var(--acc);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.gform .op{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:3px;padding:0 6px;margin-left:6px}
+.gform input:not([type=radio]),.gform select,.gform textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--ink)}
+.gform textarea{min-height:96px;resize:vertical}
+.gform input:focus,.gform select:focus,.gform textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
+.gform .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gform .rad{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+.gform .rad label{font-weight:400;display:flex;align-items:center;gap:6px;margin:0}
+.gform .btn{width:100%;justify-content:center;margin-top:8px;border:0;cursor:pointer;font-size:16px}
+.gform .note2{font-size:12px;color:var(--sub);margin-top:12px;line-height:1.7}
+.gform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.final .alt{font-size:13px;color:rgba(255,255,255,.75);margin-top:22px}
+.final .alt a{text-decoration:underline}
+@media(max-width:560px){.gform{padding:26px 18px}.gform .r2{grid-template-columns:1fr}}
 .final .small{font-size:13px;color:rgba(255,255,255,.65);margin-top:22px}
 
 footer{background:var(--dark);color:#8C847A;font-size:12px;padding:48px 0;text-align:center;line-height:2}
@@ -410,7 +428,7 @@ a.for-item:hover{background:#fff}
   <h2 class="rv">ご利用の流れ</h2>
   <p class="lead rv">パスワードをお聞きすることは、一切ありません。</p>
   <div class="flow">
-   <div class="rv"><span class="en">STEP 01</span><h3>無料診断</h3><p>メールかDMで「診断希望」とお送りください。今の状態を一枚にまとめてお届けします。</p></div>
+   <div class="rv"><span class="en">STEP 01</span><h3>無料診断</h3><p>このページ下のフォームか、DMで「診断」とお送りください。今の状態を一枚にまとめてお届けします。</p></div>
    <div class="rv"><span class="en">STEP 02</span><h3>管理者に招待</h3><p>Googleの画面から、こちらのGmailを「管理者」に追加していただくだけ。2〜3分で終わります。</p></div>
    <div class="rv"><span class="en">STEP 03</span><h3>運用開始</h3><p>返信案や投稿を作成し、ご確認いただいてから掲載します。毎週、作業内容をご報告します。</p></div>
    <div class="rv"><span class="en">STEP 04</span><h3>毎月ご報告</h3><p>何をやって、何がどう変わったかを、毎月数字でご報告します。</p></div>
@@ -451,8 +469,27 @@ a.for-item:hover{background:#fff}
  <div class="wrap">
   <div class="label">Contact</div>
   <h2>まずは、無料のGoogleマップ診断から。</h2>
-  <p>メールかInstagramのDMで「診断希望」とお送りください。<br>検索順位と口コミの状態を、一枚にまとめてお届けします。</p>
-  <div class="contact-btns"><a class="btn" href="mailto:hitokuru.sns@gmail.com?subject=%E8%A8%BA%E6%96%AD%E5%B8%8C%E6%9C%9B">メールで申し込む</a><a class="btn line" href="https://www.instagram.com/suzuki_kuchikomi_support/" target="_blank" rel="noopener">InstagramのDMで申し込む</a></div>
+  <p>会社・お店の名前と連絡先を送っていただくだけです。<br>検索順位と口コミの状態、直すところを一枚にまとめて、2営業日以内にお届けします。</p>
+  <form class="gform" action="https://formsubmit.co/suzuki.mapsupport@gmail.com" method="POST">
+   <input type="hidden" name="_subject" value="【無料診断】リフォームページから申込み">
+   <input type="hidden" name="_template" value="table">
+   <input type="hidden" name="_next" value="https://suzukimapsupport-glitch.github.io/thanks.html">
+   <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="f"><label for="g-shop">会社・お店の名前<span class="rq">必須</span></label><input id="g-shop" name="会社・お店の名前" required placeholder="例：〇〇リフォーム、〇〇美容室"></div>
+   <div class="r2">
+    <div class="f"><label for="g-ind">業種<span class="rq">必須</span></label><select id="g-ind" name="業種" required><option value="">選んでください</option><option selected>リフォーム・塗装・工務店</option><option>整体・接骨院・鍼灸院</option><option>美容室・サロン・ネイル</option><option>飲食店</option><option>教室・スクール・塾</option><option>その他</option></select></div>
+    <div class="f"><label for="g-area">地域<span class="rq">必須</span></label><input id="g-area" name="地域" required placeholder="例：千葉市緑区"></div>
+   </div>
+   <div class="f"><label for="g-person">お名前<span class="op">任意</span></label><input id="g-person" name="お名前" autocomplete="name" placeholder="例：山田"></div>
+   <div class="f"><span class="lb">結果の受け取り方<span class="rq">必須</span></span>
+    <div class="rad" role="radiogroup" aria-label="結果の受け取り方"><label><input type="radio" name="受け取り方" value="メール" checked> メール</label><label><input type="radio" name="受け取り方" value="LINE"> LINE</label><label><input type="radio" name="受け取り方" value="電話"> 電話</label></div>
+   </div>
+   <div class="f"><label for="g-contact">連絡先<span class="rq">必須</span></label><input id="g-contact" name="連絡先" required placeholder="メールアドレス・LINE ID・電話番号のどれか"></div>
+   <div class="f"><label for="g-msg">気になっていること<span class="op">任意</span></label><textarea id="g-msg" name="気になっていること" placeholder="例：口コミが増えない、地図で上に出てこない、など"></textarea></div>
+   <button class="btn" type="submit">無料で診断を申し込む</button>
+   <p class="note2">いただいた情報は、診断結果のお送りとご連絡だけに使います。送信後、ロボットでないかの確認画面が出ることがあります。</p>
+  </form>
+  <p class="alt">InstagramのDMで「診断」と送っていただいてもOKです → <a href="https://www.instagram.com/suzuki_kuchikomi_support/" target="_blank" rel="noopener">@suzuki_kuchikomi_support</a></p>
   <div class="small">しつこい営業のご連絡はいたしません。診断の費用はかかりません。</div>
  </div>
 </section>
