@@ -470,24 +470,22 @@ a.for-item:hover{background:#fff}
   <div class="label">Contact</div>
   <h2>まずは、無料のGoogleマップ診断から。</h2>
   <p>会社・お店の名前と連絡先を送っていただくだけです。<br>検索順位と口コミの状態、直すところを一枚にまとめて、2営業日以内にお届けします。</p>
-  <form class="gform" action="https://formsubmit.co/suzuki.mapsupport@gmail.com" method="POST">
-   <input type="hidden" name="_subject" value="【無料診断】リフォームページから申込み">
-   <input type="hidden" name="_template" value="table">
-   <input type="hidden" name="_next" value="https://suzukimapsupport-glitch.github.io/thanks.html">
-   <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-   <div class="f"><label for="g-shop">会社・お店の名前<span class="rq">必須</span></label><input id="g-shop" name="会社・お店の名前" required placeholder="例：〇〇リフォーム、〇〇美容室"></div>
+  <form class="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSfqb1XxXBnePJqlJgE_ksZ6hYkPSmEGwWrnUsjWIdmgijKUvQ/formResponse" data-gf data-next="/thanks.html" method="POST">
+   <input type="hidden" name="entry.1370662439" value="リフォームページ">
+   <input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="f"><label for="g-shop">会社・お店の名前<span class="rq">必須</span></label><input id="g-shop" name="entry.1407116930" required placeholder="例：〇〇リフォーム、〇〇美容室"></div>
    <div class="r2">
-    <div class="f"><label for="g-ind">業種<span class="rq">必須</span></label><select id="g-ind" name="業種" required><option value="">選んでください</option><option selected>リフォーム・塗装・工務店</option><option>整体・接骨院・鍼灸院</option><option>美容室・サロン・ネイル</option><option>飲食店</option><option>教室・スクール・塾</option><option>その他</option></select></div>
-    <div class="f"><label for="g-area">地域<span class="rq">必須</span></label><input id="g-area" name="地域" required placeholder="例：千葉市緑区"></div>
+    <div class="f"><label for="g-ind">業種<span class="rq">必須</span></label><select id="g-ind" name="entry.1179477582" required><option value="">選んでください</option><option selected>リフォーム・塗装・工務店</option><option>整体・接骨院・鍼灸院</option><option>美容室・サロン・ネイル</option><option>飲食店</option><option>教室・スクール・塾</option><option>その他</option></select></div>
+    <div class="f"><label for="g-area">地域<span class="rq">必須</span></label><input id="g-area" name="entry.753937026" required placeholder="例：千葉市緑区"></div>
    </div>
-   <div class="f"><label for="g-person">お名前<span class="op">任意</span></label><input id="g-person" name="お名前" autocomplete="name" placeholder="例：山田"></div>
+   <div class="f"><label for="g-person">お名前<span class="op">任意</span></label><input id="g-person" name="entry.1994063326" autocomplete="name" placeholder="例：山田"></div>
    <div class="f"><span class="lb">結果の受け取り方<span class="rq">必須</span></span>
-    <div class="rad" role="radiogroup" aria-label="結果の受け取り方"><label><input type="radio" name="受け取り方" value="メール" checked> メール</label><label><input type="radio" name="受け取り方" value="LINE"> LINE</label><label><input type="radio" name="受け取り方" value="電話"> 電話</label></div>
+    <div class="rad" role="radiogroup" aria-label="結果の受け取り方"><label><input type="radio" name="entry.2136413015" value="メール" checked> メール</label><label><input type="radio" name="entry.2136413015" value="LINE"> LINE</label><label><input type="radio" name="entry.2136413015" value="電話"> 電話</label></div>
    </div>
-   <div class="f"><label for="g-contact">連絡先<span class="rq">必須</span></label><input id="g-contact" name="連絡先" required placeholder="メールアドレス・LINE ID・電話番号のどれか"></div>
-   <div class="f"><label for="g-msg">気になっていること<span class="op">任意</span></label><textarea id="g-msg" name="気になっていること" placeholder="例：口コミが増えない、地図で上に出てこない、など"></textarea></div>
+   <div class="f"><label for="g-contact">連絡先<span class="rq">必須</span></label><input id="g-contact" name="entry.696359682" required placeholder="メールアドレス・LINE ID・電話番号のどれか"></div>
+   <div class="f"><label for="g-msg">気になっていること<span class="op">任意</span></label><textarea id="g-msg" name="entry.606594704" placeholder="例：口コミが増えない、地図で上に出てこない、など"></textarea></div>
    <button class="btn" type="submit">無料で診断を申し込む</button>
-   <p class="note2">いただいた情報は、診断結果のお送りとご連絡だけに使います。送信後、ロボットでないかの確認画面が出ることがあります。</p>
+   <p class="note2">いただいた情報は、診断結果のお送りとご連絡だけに使います。</p>
   </form>
   <p class="alt">InstagramのDMで「診断」と送っていただいてもOKです → <a href="https://www.instagram.com/suzuki_kuchikomi_support/" target="_blank" rel="noopener">@suzuki_kuchikomi_support</a></p>
   <div class="small">しつこい営業のご連絡はいたしません。診断の費用はかかりません。</div>
@@ -509,6 +507,17 @@ const hd=document.getElementById('hd');
 const onScroll=()=>hd.classList.toggle('solid',scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script>
+document.querySelectorAll('form[data-gf]').forEach(function(f){f.addEventListener('submit',function(e){
+ e.preventDefault();var hp=f.querySelector('.hp');if(hp&&hp.value)return;
+ var b=f.querySelector('button[type=submit]'),t=b.textContent;b.disabled=true;b.textContent='送信しています…';
+ var fd=new FormData(f),r=f.querySelector('[data-role]'),n='entry.1994063326';
+ if(r&&r.value)fd.set(n,(fd.get(n)||'')+'（'+r.value+'）');
+ fetch(f.action,{method:'POST',mode:'no-cors',body:new URLSearchParams(fd)})
+  .then(function(){location.href=f.getAttribute('data-next')})
+  .catch(function(){b.disabled=false;b.textContent=t;alert('送信できませんでした。通信状態をご確認のうえ、もう一度お試しください。')});
+})});
 </script>
 </body>
 </html>
