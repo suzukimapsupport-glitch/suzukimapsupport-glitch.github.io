@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>飲食店のGoogleマップ集客｜無料マップ診断 口コミ・マップサポート</title>
+<meta name="description" content="おいしいのに、Googleマップで上に出てこない。飲食店・カフェ・居酒屋のGoogleマップ運用を、営業の手を止めずにまるごとお任せ。先着3社は初月無料・月9,800円。パスワード不要。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="おいしいのに、地図で見つからない。｜飲食店のGoogleマップ集客">
+<meta property="og:description" content="おいしいのに、Googleマップで上に出てこない。飲食店・カフェ・居酒屋のGoogleマップ運用を、営業の手を止めずにまるごとお任せ。先着3社は初月無料・月9,800円。パスワード不要。">
+<link rel="canonical" href="https://suzukimapsupport-glitch.github.io/inshoku/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"口コミ・マップサポート",
+ "description":"飲食店向けのGoogleマップ運用・口コミ返信代行サービス","areaServed":"JP","priceRange":"月9,800円（税込）〜",
+ "url":"https://suzukimapsupport-glitch.github.io/inshoku/",
+ "sameAs":["https://www.instagram.com/suzuki_kuchikomi_support/"]}
+</script>
+<style>
+/* 地図の「上位3枠」を主役にした1カラムのLP。紙の白・墨・テラコッタ（ブランド色）・地図の緑 */
+:root{
+ --paper:#FBFAF7;--card:#FFFFFF;--ink:#1A1D1B;--sub:#5C625E;--line:#E3E1DA;--soft:#F2F0EA;
+ --acc:#B5532A;--acc-d:#8F3F1E;--acc-soft:#F6E8E1;
+ --map:#2F7D5B;--map-soft:#E4F1EA;--star:#E8A33B;--dark:#151816;
+ --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+ --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+ --num:"Inter","Noto Sans JP",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;font-size:16px;letter-spacing:.02em;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.narrow{max-width:760px}
+.eyebrow{font-family:var(--num);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:14px;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:.04em;line-height:1.45;text-wrap:balance}
+h2{font-size:clamp(26px,3.8vw,40px)}
+h3{font-size:20px}
+.lead{color:var(--sub);margin-top:16px;max-width:620px}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums;letter-spacing:0}
+section{padding-block:clamp(72px,10vw,120px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:#fff;font-weight:700;padding:16px 30px;border-radius:999px;text-decoration:none;letter-spacing:.06em;border:0;font:inherit;font-weight:700;cursor:pointer;transition:background .25s,transform .25s;box-shadow:0 6px 18px rgba(181,83,42,.25)}
+.btn:hover{background:var(--acc-d);transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--map);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);box-shadow:none}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn small{font-weight:500;opacity:.85;font-size:12px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:16px}
+.brand i{width:30px;height:30px;border-radius:50%;background:var(--acc);display:grid;place-items:center;flex:none}
+.brand i svg{width:16px;height:16px}
+.nav .btn{padding:10px 18px;font-size:14px;box-shadow:none}
+.nav-links{display:flex;gap:22px;font-size:14px}
+.nav-links a{text-decoration:none;color:var(--sub)}.nav-links a:hover{color:var(--ink)}
+@media(max-width:760px){.nav-links{display:none}}
+.brand,.nav .btn{white-space:nowrap}
+@media(max-width:430px){.brand{font-size:14px;gap:8px}.brand i{width:26px;height:26px}.nav .btn{padding:8px 14px;font-size:13px}}
+
+/* hero */
+.hero{padding-block:clamp(48px,7vw,90px) clamp(64px,8vw,100px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-grid>*{min-width:0}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--map-soft);color:var(--map);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,5.6vw,62px);line-height:1.35}
+.hero h1 em{font-style:normal;color:var(--acc);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.18em;background:var(--acc-soft);z-index:-1}
+.hero p.lead{font-size:17px;margin-top:22px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.badges{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14px;color:var(--sub)}
+.badges span{display:inline-flex;align-items:center;gap:6px}
+.badges span::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--map) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E") center/16px no-repeat}
+
+/* map pack mock */
+.phone{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 30px 60px -20px rgba(26,29,27,.25);max-width:420px;margin-inline:auto;width:100%}
+.search{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:15px;color:var(--ink);margin-bottom:14px}
+.search svg{width:16px;height:16px;flex:none}
+.minimap{height:120px;border-radius:14px;background:
+ linear-gradient(90deg,transparent 47%,#fff 47%,#fff 53%,transparent 53%) 0 0/90px 90px,
+ linear-gradient(0deg,transparent 47%,#fff 47%,#fff 53%,transparent 53%) 0 0/90px 90px,
+ linear-gradient(120deg,#E7EFE9,#EEF2EC);position:relative;margin-bottom:10px;overflow:hidden}
+.pin{position:absolute;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--acc);display:grid;place-items:center;box-shadow:0 3px 6px rgba(0,0,0,.2)}
+.pin b{transform:rotate(45deg);color:#fff;font:700 12px var(--num)}
+.pin.g{background:#9AA39E}
+.res{display:flex;gap:12px;align-items:flex-start;padding:12px 4px;border-bottom:1px solid var(--soft)}
+.res:last-of-type{border-bottom:0}
+.res .rk{font:700 14px var(--num);width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;flex:none;margin-top:2px}
+.res .nm{font-weight:700;font-size:15px;line-height:1.5}
+.res .meta{font-size:13px;color:var(--sub)}
+.stars{color:var(--star);letter-spacing:1px}
+.more{text-align:center;font-size:12px;color:var(--sub);padding:6px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:4px 0}
+.res.you{background:var(--acc-soft);border-radius:12px;padding:12px;border:0}
+.res.you .rk{background:var(--acc)}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--acc);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.cap{font-size:12px;color:var(--sub);text-align:center;margin-top:12px}
+
+/* pain */
+.pain{background:var(--card);border-block:1px solid var(--line)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.pain-grid>*{min-width:0}
+@media(max-width:820px){.pain-grid{grid-template-columns:1fr}}
+.pain-item{padding:26px 24px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+.pain-item .q{font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.6;margin-bottom:10px}
+.pain-item p{font-size:15px;color:var(--sub)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:10px}
+.why-grid>*{min-width:0}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr;gap:32px}}
+.funnel{display:grid;gap:10px}
+.funnel div{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-radius:12px;font-weight:700}
+.funnel .t{background:var(--map);color:#fff}
+.funnel .m{background:var(--map-soft);color:var(--map);margin-inline:18px}
+.funnel .b{background:var(--soft);color:var(--sub);margin-inline:36px;font-weight:500}
+.funnel span.num{font-size:13px;font-weight:600;opacity:.9}
+.note{font-size:13px;color:var(--sub);margin-top:14px}
+
+/* finding */
+.finding{background:var(--dark);color:#EDEBE6}
+.finding .eyebrow{color:#E6A17F}
+.finding h2{color:#fff}
+.finding .lead{color:#B9BDB9}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.cases>*{min-width:0}
+@media(max-width:820px){.cases{grid-template-columns:1fr}}
+.case{border:1px solid #333834;border-radius:18px;padding:28px;background:#1C201D}
+.case .k{font-size:13px;color:#9EA39F;margin-bottom:8px}
+.case .big{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.5;color:#fff}
+.case .big b{color:#F0B48F;font-family:var(--num);font-size:1.25em}
+.case p{color:#B9BDB9;font-size:15px;margin-top:10px}
+.conclude{margin-top:36px;padding:26px 28px;border-radius:16px;background:#232824;border-left:4px solid #E6A17F;font-size:17px;line-height:1.9}
+.conclude b{color:#fff}
+
+/* do */
+.do-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.do-grid>*{min-width:0}
+@media(max-width:760px){.do-grid{grid-template-columns:1fr}}
+.do{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.do .ic{width:44px;height:44px;border-radius:12px;background:var(--map-soft);display:grid;place-items:center}
+.do .ic svg{width:22px;height:22px;stroke:var(--map);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.do h3{font-family:var(--sans);font-size:17px;font-weight:700;letter-spacing:.02em}
+.do p{font-size:14.5px;color:var(--sub);margin-top:4px;line-height:1.8}
+.you-do{margin-top:28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:20px 24px;border-radius:16px;background:var(--acc-soft)}
+.you-do b{font-family:var(--serif);font-size:18px}
+
+/* report */
+.report-wrap{background:var(--soft);border-block:1px solid var(--line)}
+.report{background:var(--card);border-radius:20px;border:1px solid var(--line);padding:clamp(20px,4vw,36px);margin-top:40px;box-shadow:0 20px 50px -30px rgba(0,0,0,.3);position:relative}
+.sample{position:absolute;top:18px;right:18px;font-size:12px;font-weight:700;color:var(--acc);border:1px solid var(--acc);border-radius:4px;padding:2px 8px}
+.rep-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+.rep-head h3{font-size:19px}
+.rep-head span{font-size:13px;color:var(--sub)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpis>*{min-width:0}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{padding:16px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.kpi .l{font-size:12.5px;color:var(--sub)}
+.kpi .v{font:700 28px/1.3 var(--num);margin-top:4px}
+.kpi .v small{font-size:14px;font-weight:600}
+.kpi .d{font-size:12.5px;font-weight:700;color:var(--map);margin-top:2px}
+.rep-chart{margin-top:22px}
+.rep-chart svg{width:100%;height:auto;display:block}
+.rep-todo{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:14.5px}
+@media(max-width:760px){.rep-todo{grid-template-columns:1fr}}
+.rep-todo div{padding:16px;border-radius:12px;background:var(--paper);border:1px solid var(--line)}
+.rep-todo b{display:block;font-size:13px;color:var(--acc);margin-bottom:4px}
+
+/* price */
+.price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:44px;align-items:start}
+.price-grid>*{min-width:0}
+@media(max-width:860px){.price-grid{grid-template-columns:1fr}}
+.plan{border:2px solid var(--ink);border-radius:22px;padding:clamp(24px,4vw,36px);background:var(--card)}
+.plan .pn{font-weight:700;color:var(--sub);font-size:14px}
+.plan .pv{font-family:var(--num);font-weight:700;font-size:clamp(44px,7vw,60px);line-height:1.1;margin-top:8px}
+.plan .pv small{font-family:var(--sans);font-size:16px;font-weight:700;margin-left:4px}
+.plan .free{display:inline-block;margin-top:12px;background:var(--acc);color:#fff;font-weight:700;padding:6px 14px;border-radius:999px;font-size:14px}
+.plan ul{list-style:none;margin-top:22px;display:grid;gap:10px;font-size:15px}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li::before{content:"";flex:none;width:18px;height:18px;margin-top:5px;border-radius:50%;background:var(--map) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E") center/18px no-repeat}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+.terms div{text-align:center;padding:10px 4px;border-radius:10px;background:var(--map-soft);color:var(--map);font-weight:700;font-size:13.5px}
+.opts{border:1px solid var(--line);border-radius:22px;padding:clamp(22px,3.5vw,30px);background:var(--card)}
+.opts h3{font-size:18px}
+.opts p.s{font-size:13.5px;color:var(--sub);margin-top:4px}
+.opt{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--soft);font-size:15px}
+.opt:last-of-type{border-bottom:0}
+.opt b{display:block}
+.opt span.s{font-size:13px;color:var(--sub)}
+.opt .p{font:700 15px var(--num);white-space:nowrap;text-align:right}
+.half{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--acc-soft);font-size:14px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;counter-reset:s}
+.steps>*{min-width:0}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding:24px 22px;border-radius:16px;background:var(--card);border:1px solid var(--line);counter-increment:s}
+.step::before{content:"STEP " counter(s);font:600 12px var(--num);letter-spacing:.15em;color:var(--acc)}
+.step h3{font-family:var(--sans);font-size:17px;margin-top:6px}
+.step p{font-size:14.5px;color:var(--sub);margin-top:6px}
+.step .when{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--map);background:var(--map-soft);border-radius:999px;padding:2px 10px}
+
+/* trust */
+.trust{background:var(--card);border-block:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.trust-grid>*{min-width:0}
+@media(max-width:820px){.trust-grid{grid-template-columns:1fr}}
+.trust-grid h3{font-family:var(--sans);font-size:17px;margin-bottom:6px}
+.trust-grid p{font-size:15px;color:var(--sub)}
+.trust-grid .ln{width:40px;height:3px;background:var(--acc);margin-bottom:16px}
+.refer{margin-top:44px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:26px;border-radius:18px;border:1px dashed var(--acc);background:var(--paper)}
+@media(max-width:620px){.refer{grid-template-columns:1fr}}
+.refer .rb{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--acc);line-height:1.4}
+.refer p{font-size:15px;color:var(--sub)}
+
+/* faq */
+.faq{margin-top:36px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;position:relative;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:16px;font:500 24px var(--num);color:var(--acc);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--sub);font-size:15px}
+
+/* form */
+.apply{background:var(--dark);color:#EDEBE6}
+.apply h2{color:#fff}.apply .lead{color:#B9BDB9}.apply .eyebrow{color:#E6A17F}
+.apply-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;margin-top:10px;align-items:start}
+.apply-grid>*{min-width:0}
+@media(max-width:900px){.apply-grid{grid-template-columns:1fr;gap:28px}}
+.get{list-style:none;margin-top:26px;display:grid;gap:14px}
+.get li{display:grid;grid-template-columns:30px 1fr;gap:12px;font-size:15px;color:#D6D9D6}
+.get li b{color:#fff;display:block}
+.get .n{font:700 13px var(--num);width:30px;height:30px;border-radius:50%;border:1px solid #E6A17F;color:#E6A17F;display:grid;place-items:center}
+form{background:var(--card);color:var(--ink);border-radius:22px;padding:clamp(22px,4vw,34px);display:grid;gap:16px}
+.field{display:grid;gap:6px}
+label{font-weight:700;font-size:14px}
+label .req{font-size:11px;color:#fff;background:var(--acc);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+label .opt-l{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-left:6px;font-weight:500}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #CFCCC3;border-radius:10px;background:var(--paper);color:var(--ink);width:100%}
+textarea{min-height:96px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.radio{display:flex;gap:10px;flex-wrap:wrap}
+.radio label{font-weight:500;display:flex;align-items:center;gap:8px;border:1px solid #CFCCC3;border-radius:999px;padding:8px 14px;cursor:pointer;font-size:15px}
+.radio input{width:auto;accent-color:var(--acc)}
+.small{font-size:12.5px;color:var(--sub);line-height:1.7}
+form .btn{width:100%;padding:18px;font-size:17px}
+.hp{position:absolute;left:-9999px}
+
+footer{padding-block:40px;font-size:13px;color:var(--sub);border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}.foot a:hover{text-decoration:underline}
+
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px max(16px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-right));background:rgba(251,250,247,.96);border-top:1px solid var(--line);display:none}
+.sticky-cta .btn{width:100%}
+.sticky-cta[hidden]{display:none!important}
+@media(max-width:760px){.sticky-cta{display:block}body{padding-bottom:84px}}
+
+.reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+ .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+ .js .reveal.in{opacity:1;transform:none}
+}
+.src{font-size:12px;color:var(--sub);margin-top:14px}.src a{text-decoration:underline}.case .q2{font-family:var(--serif);font-size:19px;line-height:1.7;margin:6px 0 10px}</style>
+<meta property="og:image" content="https://suzukimapsupport-glitch.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="/" aria-label="口コミ・マップサポート トップ"><i><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg></i>口コミ・マップサポート</a>
+  <nav class="nav-links" aria-label="ページ内">
+   <a href="#do">やること</a><a href="#report">レポート</a><a href="#price">料金</a><a href="#faq">よくある質問</a>
+  </nav>
+  <a class="btn" href="#apply">無料マップ診断</a>
+ </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="kicker">飲食店・カフェ・居酒屋・テイクアウトのためのGoogleマップ運用</span>
+   <h1>おいしいのに、<br>地図で<em class="num">見つからない</em>。</h1>
+   <p class="lead">お腹がすいた人は「〇〇駅 ランチ」「近くの居酒屋」と検索して、地図に出る上の3つから写真と口コミでお店を決めます。仕込みと営業で手いっぱいのお店ほど、マップは後回し。マップのことは、まるごとお任せください。</p>
+   <div class="cta">
+    <a class="btn" href="#apply">無料でマップ診断を受ける</a>
+    <a class="btn ghost" href="#price">料金を見る</a>
+   </div>
+   <div class="badges"><span>先着3社 初月無料</span><span>月9,800円</span><span>パスワード不要</span></div>
+  </div>
+  <div aria-label="Googleマップの検索結果のイメージ">
+   <div class="phone">
+    <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="#5C625E" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>〇〇駅 ランチ</div>
+    <div class="minimap" aria-hidden="true">
+     <span class="pin" style="left:22%;top:30%"><b>1</b></span>
+     <span class="pin" style="left:54%;top:18%"><b>2</b></span>
+     <span class="pin" style="left:70%;top:52%"><b>3</b></span>
+     <span class="pin g" style="left:36%;top:62%"><b>8</b></span>
+    </div>
+    <div class="res"><span class="rk">1</span><div><div class="nm">A食堂</div><div class="meta"><span class="stars">★★★★</span>☆ 4.0（口コミ 35件）</div></div></div><div class="res"><span class="rk">2</span><div><div class="nm">Bカフェ</div><div class="meta"><span class="stars">★★★★</span>☆ 4.1（口コミ 18件）</div></div></div><div class="res"><span class="rk">3</span><div><div class="nm">C亭</div><div class="meta"><span class="stars">★★★★</span>☆ 3.9（口コミ 41件）</div></div></div>
+    <div class="more">「もっと見る」を押さないと、ここから下は出てきません</div>
+    <div class="res you"><span class="rk">8</span><div><div class="nm">あなたのお店<span class="tag">評価は一番高い</span></div><div class="meta"><span class="stars">★★★★★</span> 4.9（口コミ 6件）</div></div></div>
+    <p class="cap">※ イメージです。実際の順位は、検索する場所やことばで変わります。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+ <div class="wrap">
+  <span class="eyebrow">Sound familiar?</span>
+  <h2>こんなこと、ありませんか。</h2>
+  <div class="pain-grid"><div class="pain-item reveal"><div class="q">常連さんは来てくれるのに、<br>新しいお客さまが増えない。</div><p>近くで働く人や観光の人は、その場でマップを開いてお店を探します。そこで上に出ていないと、気づかれません。</p></div><div class="pain-item reveal"><div class="q">営業時間やメニューが、<br>マップで古いまま。</div><p>「行ったら閉まっていた」「メニューが違った」は、悪い口コミのもと。変わったらすぐ反映が大切です。</p></div><div class="pain-item reveal"><div class="q">写真も投稿も口コミ返信も、<br>やる時間がない。</div><p>仕込み、営業、片づけ、仕入れ。その合間にマップを整えるのは、正直むずかしいものです。</p></div></div>
+ </div>
+</section>
+
+<!-- WHY -->
+<section>
+ <div class="wrap why-grid">
+  <div>
+   <span class="eyebrow">Why the top 3</span>
+   <h2>選ばれるのは、<br>地図の「上の3つ」。</h2>
+   <p class="lead">スマホで「〇〇駅 ランチ」「〇〇 居酒屋 個室」と調べると、検索結果のいちばん上に地図と3つのお店が出ます。4番目から下は「もっと見る」を押した人にしか見えません。</p>
+   <p class="lead">お店を探す人は、この3つの料理写真と口コミを見て、そのまま歩いて向かいます。だから、同じ味でも、ここに入るかどうかで来店数が変わります。</p>
+  </div>
+  <div>
+   <div class="funnel" aria-label="地図の表示の段階">
+    <div class="t">上の3つ <span class="num">最初から表示</span></div>
+    <div class="m">4〜10番目 <span class="num">「もっと見る」の先</span></div>
+    <div class="b">11番目より下 <span class="num">ほぼ見られない</span></div>
+   </div>
+   <p class="note">Googleの検索画面では、地図の結果は最初に3件だけ表示されます。</p>
+  </div>
+ </div>
+</section>
+
+<!-- GOOGLE OFFICIAL -->
+<section class="finding">
+ <div class="wrap">
+  <span class="eyebrow">How Google ranks</span>
+  <h2>順位の決まり方は、<br>Googleが公式に説明しています。</h2>
+  <p class="lead">Googleのヘルプには「ローカル検索結果は、主に関連性、距離、知名度に基づいて表示されます」と書かれています。</p>
+  <div class="cases">
+   <div class="case reveal"><div class="k">関連性</div><div class="q2">検索されたことばと、お店の情報が合っているか。</div><p>「ランチ」「テイクアウト」「個室」「子連れ」など、お客さまが実際に打つことばが、お店の情報やメニューに入っているか。設定と書き方で変わります。</p></div>
+   <div class="case reveal"><div class="k">知名度</div><div class="q2">お店がどれだけ知られているか。口コミの数も材料のひとつ。</div><p>口コミの数や、ほかのサイトでの紹介などから判断されます。おいしかったお客さまが、帰る前に書きやすい流れがあるかどうかで、口コミの集まり方は変わります。</p></div>
+  </div>
+  <div class="conclude reveal"><b>距離は変えられません。でも、関連性と知名度は直せます。</b>Googleも「情報が充実していて正確なほど、表示される可能性が高くなる」「口コミに返信することで、フィードバックを重視していることをアピールできる」と勧めています。うちがやるのは、その全部です。</div>
+  <p class="src">出典：Google ビジネス プロフィール ヘルプ「<a href="https://support.google.com/business/answer/7091?hl=ja" target="_blank" rel="noopener">Google のローカル検索結果のランキングを改善する方法</a>」。Googleはお金を受け取って順位を上げることはしていません。</p>
+ </div>
+</section>
+
+<!-- DO -->
+<section id="do">
+ <div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>マップのことは、全部こちらで。</h2>
+  <p class="lead">「〇〇駅 ランチ」で探している人に、あなたのお店が上の3つに出ること。そのためにやることを、毎月まるごと引き受けます。</p>
+  <div class="do-grid"><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div><div><h3>お店情報を整える</h3><p>カテゴリ、説明文、メニュー、料理写真の並べ方。順位に関わる基本の設定を、最初の1ヶ月で見直します。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div><div><h3>探されることばで出るように</h3><p>「ランチ」「テイクアウト」「個室」「子連れOK」など、お客さまが実際に打つことばで見つけてもらえるようにします。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><div><h3>週1回の投稿</h3><p>季節のメニュー、日替わり、イベント、お休みのお知らせ。お店の空気が伝わる投稿を、毎週作って出します。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4z"/></svg></div><div><h3>口コミへの返信をすべて</h3><p>うれしい口コミにも、厳しい口コミにも、お店の言葉づかいに合わせて返信します。悪い口コミへの対応もご相談ください。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M10 16h4"/></svg></div><div><h3>口コミが集まる仕組みづくり</h3><p>テーブルやレジ横のPOP、お会計のときの一言まで。お客さまが書きやすい流れを作ります（データ作成まで）。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><div><h3>毎月の数字レポート</h3><p>順位、マップから電話された回数、道順を調べられた回数、近くのお店との比較を、毎月お届けします。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div><div><h3>営業時間・臨時休業の反映</h3><p>定休日、年末年始、臨時休業、ラストオーダー。「行ったら閉まっていた」をなくします。</p></div></div><div class="do reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4h4l2 5-3 2a11 11 0 0 0 4 4l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 2-2z"/></svg></div><div><h3>予約・注文ボタンの設定</h3><p>マップから電話・予約ページ・テイクアウト注文へ、迷わず進めるようにボタンを整えます。</p></div></div></div>
+  <div class="you-do reveal"><b>お願いするのは、ほぼこれだけ。</b><span>最初に一度、Googleの画面でこちらを「管理者」に追加していただくこと。あとはお料理と接客に集中してください。</span></div>
+ </div>
+</section>
+
+<!-- REPORT -->
+<section class="report-wrap" id="report">
+ <div class="wrap">
+  <span class="eyebrow">Monthly report</span>
+  <h2>何が変わったか、毎月数字で。</h2>
+  <p class="lead">「やっています」だけでは、何が変わったかわかりません。毎月、変化を数字でお見せします。</p>
+  <div class="report reveal">
+   <span class="sample">見本</span>
+   <div class="rep-head"><h3>〇〇食堂さま　月次レポート</h3><span>対象：「〇〇駅 ランチ」／ 見本の数字です</span></div>
+   <div class="kpis">
+    <div class="kpi"><div class="l">検索順位</div><div class="v num">4<small>位</small></div><div class="d">先月 8位 → 4つ上昇</div></div>
+    <div class="kpi"><div class="l">マップからの電話</div><div class="v num">14<small>回</small></div><div class="d">先月 6回</div></div>
+    <div class="kpi"><div class="l">道順を調べた人</div><div class="v num">52<small>人</small></div><div class="d">先月 29人</div></div>
+    <div class="kpi"><div class="l">口コミ</div><div class="v num">11<small>件</small></div><div class="d">今月 +5件</div></div>
+   </div>
+   <div class="rep-todo">
+    <div><b>今月やったこと</b>カテゴリを追加／説明文に「ランチ」「テイクアウト」を追加／投稿4回／口コミ返信6件／テーブルPOPを作成</div>
+    <div><b>来月やること</b>「〇〇駅 個室」でも上に出るよう、お店の特徴を追加／料理写真の並べ方を整える</div>
+   </div>
+  </div>
+  <p class="note">※ 上は、レポートの形をお見せするための見本です。実際のお店の結果ではありません。順位や回数をお約束するものでもありません。</p>
+ </div>
+</section>
+
+<!-- PRICE -->
+<section id="price">
+ <div class="wrap">
+  <span class="eyebrow">Price</span>
+  <h2>まず1ヶ月、無料で試してください。</h2>
+  <p class="lead">始めたばかりなので、先着3社だけ1ヶ月目を無料にしています。2ヶ月目からは月9,800円です。お申込みのときに、料金もすべて文章でお送りします。</p>
+  <div class="price-grid">
+   <div class="plan reveal">
+    <div class="pn">基本プラン（税込）</div>
+    <div class="pv">9,800<small>円 / 月</small></div>
+    <span class="free">最初の1ヶ月は無料</span>
+    <p class="small" style="margin-top:10px"><b>1ヶ月無料と月9,800円は先着3社までです。</b>4社目からは月19,800円になります。</p>
+    <ul><li>お店情報の整え（カテゴリ・説明文・メニュー・写真の並べ方）</li><li>探されることば（ランチ・個室など）でも出るようにする設定</li><li>週1回のGoogle投稿</li><li>口コミへの返信すべて（悪い口コミへの対応も）</li><li>口コミカード・POPのデータ作成</li><li>営業時間・臨時休業の反映</li><li>予約・注文ボタンの設定</li><li>毎月の数字レポート（順位・電話・道順・近くのお店との比較）</li></ul>
+    <div class="terms"><div>初期費用なし</div><div>パスワード不要</div><div>書類・ハンコ不要</div></div>
+   </div>
+   <div class="opts reveal">
+    <h3>オプション（必要なお店だけ）</h3>
+    <p class="s">マップと合わせて整えると、見つけてもらってからご来店までがスムーズになります。</p>
+    <div class="opt"><div><b>LINE公式アカウント</b><span class="s">開設・あいさつ文・自動返信・予約の案内</span></div><div class="p">20,000円</div></div>
+    <div class="opt"><div><b>ホームページ（1ページ）</b><span class="s">月額なし。独自ドメインは実費</span></div><div class="p">30,000円</div></div>
+    <div class="opt"><div><b>チラシ・ショップカード</b><span class="s">デザイン。印刷代は実費</span></div><div class="p">10,000円</div></div>
+    <div class="opt"><div><b>インスタ投稿</b><span class="s">週1回。マップの投稿と内容をそろえます</span></div><div class="p">5,000円/月</div></div>
+    <p class="small" style="margin-top:8px">金額はすべて税込です。オプションは1回払い（インスタ投稿のみ月額）。</p>
+   </div>
+  </div>
+  <p class="note">お支払いは銀行振込です。月末にご請求し、翌月末までにお支払いいただきます。</p>
+ </div>
+</section>
+
+<!-- STEPS -->
+<section style="padding-top:0">
+ <div class="wrap">
+  <span class="eyebrow">How to start</span>
+  <h2>始めるまでの流れ</h2>
+  <div class="steps">
+   <div class="step reveal"><h3>無料マップ診断に申し込む</h3><p>このページの下のフォームから。お店の名前と連絡先だけで大丈夫です。</p><span class="when">1分</span></div>
+   <div class="step reveal"><h3>診断結果を受け取る</h3><p>今の順位、口コミ、直すところを1枚にまとめてお送りします。見て決めてください。</p><span class="when">2営業日以内</span></div>
+   <div class="step reveal"><h3>管理者に追加していただく</h3><p>Googleの画面で、こちらを管理者に追加するだけ。やり方はご案内します。</p><span class="when">5分</span></div>
+   <div class="step reveal"><h3>無料の1ヶ月スタート</h3><p>お店情報の整えから始めて、1週間以内に一度ご報告します。</p><span class="when">先着3社</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+ <div class="wrap">
+  <span class="eyebrow">Promise</span>
+  <h2>安心してお任せいただくために。</h2>
+  <div class="trust-grid">
+   <div class="reveal"><div class="ln"></div><h3>パスワードはお預かりしません</h3><p>Googleの正式な「ユーザーを追加」の機能を使います。「管理者」は、お店のページを消したり、ほかの人を追加したりできない権限です。</p></div>
+   <div class="reveal"><div class="ln"></div><h3>やらせの口コミはしません</h3><p>口コミの代筆や、割引と引きかえのお願いは、Googleのルール違反です。実際のお客さまが書きやすくする工夫だけを行います。</p></div>
+   <div class="reveal"><div class="ln"></div><h3>結果は数字でお見せします</h3><p>順位や電話の回数を毎月お伝えします。順位をお約束することはできないからこそ、包み隠さずお見せします。</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+ <div class="wrap narrow">
+  <span class="eyebrow">FAQ</span>
+  <h2>よくあるご質問</h2>
+  <div class="faq"><details><summary>本当に1ヶ月無料ですか？ 勝手にお金がかかりませんか？</summary><p>はい、先着3社は最初の1ヶ月が無料で、2ヶ月目から月9,800円です。お申込みの前に、料金とやることをすべて文章でお送りし、「お願いします」とお返事いただいてからのスタートです。知らないうちにお金がかかることはありません。</p></details><details><summary>グルメサイトにも載っています。それでも意味はありますか？</summary><p>あります。グルメサイトとGoogleマップは別の入口です。今いる場所の近くで探す人は、Googleマップを開くことが多いです。Googleマップは掲載が無料なので、グルメサイトはそのままに、マップからの来店を増やせます。</p></details><details><summary>パスワードを教える必要はありますか？</summary><p>ありません。Googleのビジネスプロフィールの「ユーザーとアクセス権」から、こちらを管理者として追加していただく形です。</p></details><details><summary>順位は必ず上がりますか？</summary><p>順位や来店数をお約束することはできません。Googleの順位は、検索する場所やことば、近くのお店の状況でも変わるためです。そのかわり、毎月の変化を数字でお見せします。</p></details><details><summary>口コミを書いてもらうのに、1品サービスなどはしますか？</summary><p>しません。サービスや割引と引きかえに口コミをお願いすることは、Googleのルールで禁止されています。満足していそうな方にだけお願いすることも禁止です。来られた方みなさんに、同じように書きやすくする工夫をします。</p></details><details><summary>悪い口コミを消してもらえますか？</summary><p>口コミを消すことはできません。ルール違反の口コミ（関係のない内容や、なりすましなど）はGoogleに報告します。返信の文はこちらで作ります。ていねいな返信は、次に見たお客さまの安心につながります。</p></details><details><summary>メニューの写真は撮ってもらえますか？</summary><p>撮影はしていません。お店で撮っていただいた写真を、見やすく並べ替えたり、選んだりします。スマホでの撮り方のコツもお伝えします。</p></details><details><summary>どんな人がやっていますか？</summary><p>千葉を拠点に、地域のお店のGoogleマップ運用をお手伝いしている「口コミ・マップサポート」のスズキです。まだ始めたばかりなので、まずは結果で信用していただけるよう、先着3社だけ初月無料にしています。</p></details></div>
+ </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply">
+ <div class="wrap apply-grid">
+  <div>
+   <span class="eyebrow">Free check</span>
+   <h2>無料マップ診断</h2>
+   <p class="lead">お店の名前を入れるだけ。今のマップの状態を1枚にまとめて、2営業日以内にお送りします。診断のあとに、しつこい営業はしません。</p>
+   <ul class="get">
+    <li><span class="n">1</span><div><b>今の順位</b>「〇〇駅 ランチ」などで、何番目に出ているか</div></li>
+    <li><span class="n">2</span><div><b>上の3つとの差</b>口コミの数、写真、投稿、設定のちがい</div></li>
+    <li><span class="n">3</span><div><b>直すところ</b>すぐできることから順番に、具体的に</div></li>
+   </ul>
+  </div>
+  <form id="form" action="https://formsubmit.co/suzuki.mapsupport@gmail.com" method="POST">
+   <input type="hidden" name="_subject" value="【無料マップ診断】飲食店ページから申込み">
+   <input type="hidden" name="_template" value="table">
+   <input type="hidden" name="_next" value="https://suzukimapsupport-glitch.github.io/thanks.html">
+   <input type="hidden" name="業種" value="飲食店">
+   <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <div class="field"><label for="f-name">お店の名前<span class="req">必須</span></label><input id="f-name" name="店名" required placeholder="例：〇〇食堂、カフェ〇〇"></div>
+   <div class="field"><label for="f-area">最寄り駅・地域<span class="req">必須</span></label><input id="f-area" name="最寄り駅・地域" required placeholder="例：志津駅、千葉市緑区"></div>
+   <div class="row2">
+    <div class="field"><label for="f-person">お名前<span class="opt-l">任意</span></label><input id="f-person" name="お名前" autocomplete="name" placeholder="例：山田"></div>
+    <div class="field"><label for="f-role">お立場<span class="opt-l">任意</span></label><select id="f-role" name="お立場"><option value="">選んでください</option><option>オーナー・店長</option><option>スタッフ</option><option>その他</option></select></div>
+   </div>
+   <div class="field"><span style="font-weight:700;font-size:14px">結果の受け取り方<span class="req" style="font-size:11px;color:#fff;background:var(--acc);border-radius:4px;padding:1px 6px;margin-left:6px">必須</span></span>
+    <div class="radio" role="radiogroup" aria-label="結果の受け取り方">
+     <label><input type="radio" name="受け取り方" value="メール" checked> メール</label>
+     <label><input type="radio" name="受け取り方" value="LINE"> LINE</label>
+     <label><input type="radio" name="受け取り方" value="電話"> 電話</label>
+    </div>
+   </div>
+   <div class="field"><label for="f-contact">連絡先<span class="req">必須</span></label><input id="f-contact" name="連絡先" required placeholder="メールアドレス・LINE ID・電話番号のどれか"></div>
+   <div class="field"><label for="f-msg">気になっていること<span class="opt-l">任意</span></label><textarea id="f-msg" name="気になっていること" placeholder="例：新しいお客さまが増えない、口コミが少ない、など"></textarea></div>
+   <p class="small">いただいた情報は、診断結果のお送りとご連絡だけに使います。送信後、ロボットでないかの確認画面が出ることがあります。</p>
+   <button class="btn" type="submit">無料で診断を申し込む</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap foot">
+  <div>© 口コミ・マップサポート　<a href="/">トップページ</a>　<a href="https://www.instagram.com/suzuki_kuchikomi_support/" target="_blank" rel="noopener">Instagram</a></div>
+  <div>特定商取引法に基づく表記：ご請求いただければ、遅滞なく開示します。</div>
+ </div>
+</footer>
+
+<div class="sticky-cta"><a class="btn" href="#apply">無料マップ診断を受ける <small>1分</small></a></div>
+
+<script>
+if('IntersectionObserver' in window){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ const sc=document.querySelector('.sticky-cta');
+ new IntersectionObserver(es=>es.forEach(e=>{sc.hidden=e.isIntersecting})).observe(document.getElementById('apply'));
+}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'))}
+</script>
+</body>
+</html>
