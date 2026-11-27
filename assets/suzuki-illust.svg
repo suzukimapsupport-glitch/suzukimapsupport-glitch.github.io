@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" role="img" aria-label="パソコンでGoogleマップの作業をする代表スズキのイラスト">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3ece1"/><stop offset="1" stop-color="#ebe2d3"/></linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe9d6"/><stop offset="1" stop-color="#f4d3b3"/></linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b98a62"/><stop offset="1" stop-color="#9c7150"/></linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3a52"/><stop offset="1" stop-color="#1d2738"/></linearGradient>
+    <clipPath id="scr"><rect x="262" y="176" width="150" height="96" rx="4"/></clipPath>
+  </defs>
+  <rect width="480" height="400" rx="24" fill="url(#wall)"/>
+  <!-- window with evening light -->
+  <rect x="40" y="40" width="150" height="170" rx="10" fill="url(#win)"/>
+  <path d="M115 40v170M40 125h150" stroke="#f3ece1" stroke-width="6"/>
+  <circle cx="160" cy="80" r="16" fill="#f7c48f" opacity=".8"/>
+  <path d="M40 190 L80 160 L110 178 L150 150 L190 172 L190 210 L40 210Z" fill="#e9c4a2" opacity=".7"/>
+  <!-- shelf + plant -->
+  <rect x="300" y="70" width="140" height="8" rx="3" fill="#c9a882"/>
+  <rect x="318" y="44" width="16" height="26" rx="2" fill="#d4572a"/><rect x="336" y="38" width="14" height="32" rx="2" fill="#3d6b5b"/><rect x="352" y="48" width="12" height="22" rx="2" fill="#c9a45c"/>
+  <path d="M405 70c-14-8-18-24-10-34 6 10 10 16 10 34zm0 0c10-10 26-12 32-4-10 4-18 6-32 4zm0 0c-4-14 4-28 16-30 0 12-4 20-16 30z" fill="#5f8a74"/>
+  <rect x="396" y="56" width="20" height="14" rx="3" fill="#e7ded0"/>
+  <!-- desk -->
+  <rect x="0" y="300" width="480" height="100" fill="url(#desk)"/>
+  <rect x="0" y="296" width="480" height="10" fill="#c99d74"/>
+  <!-- laptop -->
+  <path d="M250 168h174a6 6 0 0 1 6 6v104H244V174a6 6 0 0 1 6-6z" fill="#1d2433"/>
+  <g clip-path="url(#scr)">
+    <rect x="262" y="176" width="150" height="96" fill="#eef1ea"/>
+    <path d="M262 236 L412 214" stroke="#fff" stroke-width="9"/><path d="M322 176 L340 272" stroke="#fff" stroke-width="7"/>
+    <path d="M262 196 Q340 214 412 188" stroke="#f3e2b3" stroke-width="5" fill="none"/>
+    <rect x="270" y="182" width="40" height="26" rx="4" fill="#dfe8d9"/>
+    <circle cx="296" cy="252" r="5" fill="#9aa3b2"/><circle cx="388" cy="200" r="5" fill="#9aa3b2"/>
+    <g transform="translate(344 214)"><path d="M0 -18c-8 0-14 6-14 13 0 10 14 21 14 21s14-11 14-21c0-7-6-13-14-13z" fill="#d4572a"/><circle cx="0" cy="-5" r="5" fill="#fff"/></g>
+    <rect x="366" y="230" width="40" height="34" rx="4" fill="#fff"/>
+    <rect x="371" y="236" width="22" height="3" rx="1.5" fill="#c9cbd1"/><rect x="371" y="243" width="30" height="3" rx="1.5" fill="#c9cbd1"/>
+    <text x="371" y="259" font-family="sans-serif" font-size="8" fill="#e7a33e">★★★★★</text>
+  </g>
+  <path d="M226 278h228l-10 18H236z" fill="#2a3242"/>
+  <!-- mug -->
+  <rect x="122" y="262" width="34" height="38" rx="6" fill="#f6f4ef"/>
+  <path d="M156 272c12 0 12 18 0 18" stroke="#f6f4ef" stroke-width="6" fill="none"/>
+  <path d="M132 252c-4-8 4-10 0-18M144 252c-4-8 4-10 0-18" stroke="#d9cfc1" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- notebook -->
+  <rect x="40" y="282" width="70" height="16" rx="3" fill="#3d6b5b" transform="rotate(-6 75 290)"/>
+  <!-- person (3/4 back view) -->
+  <path d="M166 400c0-70 26-118 78-128 52 10 78 58 78 128z" fill="url(#shirt)"/>
+  <path d="M224 280c4 8 34 8 38 0l-3-22h-32z" fill="#e3b08c"/>
+  <ellipse cx="246" cy="226" rx="40" ry="46" fill="#efc3a1"/>
+  <ellipse cx="283" cy="232" rx="7" ry="11" fill="#e8b996"/>
+  <path d="M283 226c2 4 2 9 0 13" stroke="#d9a07c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M206 236c-8-40 10-66 42-68 28-2 42 18 40 44-4-6-10-10-16-10 2 8 0 14-4 18-2 26-14 42-34 46-16 2-26-10-28-30z" fill="#1f1b18"/>
+  <path d="M214 206c8-18 22-28 40-30M210 232c2 14 8 26 18 32" stroke="#3a322c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- arm to keyboard -->
+  <path d="M300 300c14-6 30-10 44-12l4 12c-14 4-30 10-42 16z" fill="#232e42"/>
+  <ellipse cx="350" cy="292" rx="10" ry="7" fill="#efc3a1"/>
+  <!-- sticky note -->
+  <rect x="430" y="186" width="30" height="30" rx="2" fill="#f6d9a8" transform="rotate(6 445 201)"/>
+  <path d="M436 198h18M436 205h12" stroke="#c9a45c" stroke-width="2" transform="rotate(6 445 201)"/>
+</svg>
